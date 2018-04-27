@@ -1,0 +1,31 @@
+.head_Left{
+  display: inline-block;
+  padding-left: 0.25rem;
+  width: 2rem;
+  text-align: left;
+  }
+.head_Left i{
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAmVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VHQRUAAAAMnRSTlMA9y8D1gvwzjslGN7aq4Ji6ubGr6mYhXtfXFZBKhMRB+KkIA7Tw76gjnVvSDQbFriJT5d2qy4AAAD5SURBVDjLlZJJtoIwFETTAR+BSPMBQVHs+672vzgzdGalxve8cysV8SOxDQSbuDJLlt3UwINkFzXkidSY/COsBclmEi9NsrVEM5DvcJRoJxyrjpBWk3ddtxOH6nsG2Qgu90zCBqyD6/Ygd1sDdkmzYUPv5sE6X8v+yUriTPqqCjzrfFvN7baokLSk7/aJfCrIDAnMm4VXc4OyF2yuESIvOu1XLP2XYuwDllYpio6FtTJIZ4I2KWGmND0vkcz4ljuE3Zalbwa5u823HHlv5dbxaLl3LX3eJO/4Lfc+dLxDQXvrTYTiwi9/QHIJPOhi4G9HIw+L2/rrk3wAPewWlVb+5NsAAAAASUVORK5CYII=") no-repeat;
+  height: 0.5rem;
+  width: 0.5rem;
+  display: inline-block;
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
+.center_Title{
+  display: inline-block;
+}
+.head_Right{
+  display: inline-block;
+  padding-right: 0.3rem;
+  width: 2rem;
+  text-align: right;
+}
+.head_Right i{
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAArCAMAAAA0X5qLAAAAmVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VHQRUAAAAMnRSTlMAHRDTQRTsJPzW6fSZRhoEu5WLhl9ZTw355t3Ioo4vzZ1/Z0MyMQnawmsptbB0VTWtqFZd+/AAAAGYSURBVDjLvZXbVqswEIY5JYRDC6XUUnrUtvagW7ff+z+cumIVaAp449zwr/CtYTL/JFh/F8N8s5YKJeebfNiO3qVUQqV3t9GBC6yzl5Xt2PtJ5gLBwIxOFxBlfmXlvIxgMTWwfgCxaCyKGA7+FbuShFtDjm2I3DfzSlzbWJ3tIv16vQGusMwhXA61uheEOq8xd8ii2jPwWrq/hUoHXeJWr2KCH9+IRCssIr69TMms9liSXmYH/A74jBpqlbO2usIl12LDuBNestFizUsnPGGuhWSlRfJwr63xxp624/4h0a/2SC0UthYjmD1+smiTHmcw+nIRpQU4WgTA7uM5Bj63sYOLGw5oUfwms2TXo+ZQizmT/t2IyXr0Ob446HbCweXrQnXOxgolvqdu2QHHPPeeZ7tgUJmpUSv8zLH3GZygXuune3h7dxFZ895wbrB+yDGprXjwz8y+hs37xy4pzXWcCoL6m+mB0jahuyOkjfpyZgY2GTxBcVXdiblwqiF87/Qmgf/+9YYLTCFHZ+OPp2xwUfk03ibWX8U7WFszMru6oCgAAAAASUVORK5CYII=") no-repeat;
+  height: 0.5rem;
+  width: 0.5rem;
+  display: inline-block;
+  background-size: 100% 100%;
+  vertical-align: middle;
+}
