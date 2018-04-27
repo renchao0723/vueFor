@@ -37,7 +37,7 @@ export default {
   methods: {
     selectpage (num) {
       this.footArr.map(function (item, index) {
-        item.active = (index === num ? true : false)
+        item.active = index === num
       })
     }
   }
