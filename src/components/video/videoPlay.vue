@@ -1,10 +1,14 @@
 <template>
-  <div>123</div>
+  <video-tag></video-tag>
 </template>
 
 <script>
+import videoTag from './children/videoTag'
 export default {
-  name: 'videoPlay'
+  name: 'videoPlay',
+  components: {
+    videoTag
+  }
 }
 </script>
 
