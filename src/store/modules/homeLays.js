@@ -1,4 +1,3 @@
-
 const state = {
   homeHeadShow: true,
   homeFootShow: true,
@@ -27,6 +26,15 @@ const getters = {
 const actions = {
   homeHeadAct (context) {
     context.commit('showHomeHead')
+  },
+  homeHeadActH (context) {
+    context.commit('hideHomeHead')
+  },
+  homeFootAct (context) {
+    context.commit('showHomeFoot')
+  },
+  homeFootActH (context) {
+    context.commit('hideHomeFoot')
   },
   editHomeJsonAct (context, value) {
     context.commit('editHomeJson', value)

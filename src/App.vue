@@ -16,24 +16,22 @@
 <script>
 import homeHead from './components/homeHead'
 import homeFoot from './components/homefoot'
-import store from './store'
 export default {
   name: 'App',
   data () {
     return {
     }
   },
-  store,
   components: {
     homeHead,
     homeFoot
   },
   computed: {
     getHead () {
-      return store.getters.getHead
+      return this.$store.getters.getHead
     },
     getHeadJson () {
-      return store.getters.getHeadJson
+      return this.$store.getters.getHeadJson
     }
   }
 }

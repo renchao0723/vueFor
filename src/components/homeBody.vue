@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import store from '../store'
 import homeBodySwiper from './homeBodySwiper'
+import { getHttp } from '../config/httpApi'
 export default {
   name: 'HelloWorld',
   data () {
@@ -24,15 +24,16 @@ export default {
     }
   },
   mounted () {
-    this.axios.get('https://192.168.1.107/apps/v1/Keshi/hotList')
-      .then(response => { this.ksList = response.data.data })
+    getHttp('https://192.168.1.107/apps/v1/Keshi/hotList').then(response => {
+      this.ksList = response.data.data
+    })
   },
   components: {
     homeBodySwiper
   },
   methods: {
     changeHomeHead: function () {
-      store.dispatch('homeHeadAct')
+      this.store.dispatch('homeHeadAct')
     }
   }
 }

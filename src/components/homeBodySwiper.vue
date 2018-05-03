@@ -9,7 +9,7 @@
 <script>
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-
+import { getHttp } from '../config/httpApi'
 export default {
   name: 'homeBodySwiper',
   data () {
@@ -32,8 +32,9 @@ export default {
     }
   },
   mounted () {
-    this.axios.get('https://192.168.1.107/apps/v1/public/bannerList')
-      .then(response => { this.slides = response.data.data })
+    getHttp('https://192.168.1.107/apps/v1/public/bannerList').then(response => {
+      this.slides = response.data.data
+    })
   }
 }
 </script>
