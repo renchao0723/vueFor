@@ -27,13 +27,15 @@ export default {
     getHttp('https://192.168.1.107/apps/v1/Keshi/hotList').then(response => {
       this.ksList = response.data.data
     })
+    this.changeHomeHead()
   },
   components: {
     homeBodySwiper
   },
   methods: {
     changeHomeHead: function () {
-      this.store.dispatch('homeHeadAct')
+      console.log(1)
+      this.$store.dispatch('homeHeadAct')
     }
   }
 }

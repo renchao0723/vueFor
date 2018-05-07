@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <div class='head'>
-      <slot name='headLeft'></slot>
-      <slot name='centerTitle' class="centerTitle"></slot>
-      <slot name='headRight' class="headRight"></slot>
+  <transition name='fade'>
+    <div>
+      <div class='head'>
+        <slot name='headLeft'></slot>
+        <slot name='centerTitle' class="centerTitle"></slot>
+        <slot name='headRight' class="headRight"></slot>
+      </div>
+      <div style="height: 0.9rem;"></div>
     </div>
-    <div style="height: 0.9rem;"></div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -38,5 +40,15 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: all ease-in-out 0.5s;
+  }
+  .fade-enter, .fade-leave-to{
+    height: 0;opacity: 0;
+  }
+  .fade-enter-to, .fade-leave{
+    height: 0.9rem;
+    opacity: 0.5;
   }
 </style>

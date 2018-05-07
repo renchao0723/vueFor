@@ -24,7 +24,7 @@ import 'vue-video-player/src/custom-theme.css'
 import { videoPlayer } from 'vue-video-player'
 export default {
   name: 'headTop',
-  props: ['videoSrc'],
+  props: ['videoSrc', 'videoImage'],
   data () {
     return {
       playerOptions: {
@@ -45,7 +45,7 @@ export default {
           remainingTimeDisplay: false,
           fullscreenToggle: true
         },
-        poster: 'http://img1.myzx.cn/video/mysource/image/20180427/5ae2da798a605.jpg',
+        poster: this.videoImage,
         width: '100%',
         height: '100%'
       }

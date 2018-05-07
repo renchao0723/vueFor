@@ -7,7 +7,6 @@ export function getHttp (apiRoute) {
   })
 }
 export function postHttp (route) {
-  console.log(route.data)
   return request({
     url: route.url,
     method: 'post',

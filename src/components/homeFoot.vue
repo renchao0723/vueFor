@@ -2,8 +2,10 @@
   <div class="foot">
     <ul class="footer">
       <li v-for="(item, index) in footArr" v-bind:key="index" v-bind:class="{ active: item.active }" @click="selectpage(index)">
-        <i v-bind:class ="item.class"></i>
-        <p>{{item.name}}</p>
+        <router-link :to="{name:item.url,params:{ } }" >
+          <i v-bind:class ="item.class"></i>
+          <p>{{item.name}}</p>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -18,19 +20,23 @@ export default {
       footArr: [{
         name: '首頁',
         class: 'icon_index',
-        active: true
+        active: true,
+        url: 'homeBody'
       }, {
-        name: '首頁',
+        name: '微视',
         class: 'icon_weishi',
-        active: false
+        active: false,
+        url: '/ws'
       }, {
-        name: '首頁',
+        name: '小视频',
         class: 'icon_video',
-        active: false
+        active: false,
+        url: 'videoPlay'
       }, {
-        name: '首頁',
+        name: '我的',
         class: 'icon_my',
-        active: false
+        active: false,
+        url: '/me'
       }]
     }
   },

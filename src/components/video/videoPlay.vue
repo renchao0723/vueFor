@@ -1,5 +1,11 @@
 <template>
-  <video-tag videoSrc="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video-tag>
+  <div class="videoPlay">
+    <video-tag :video-src='videoDetail.url' :video-image='videoDetail.origin'></video-tag>
+    <div class="videodetail">
+      <h2>{{videoDetail.title}}</h2>
+      <div class="shortIntro shortIntroHide" @click="shortIntro">简介 ></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -17,13 +23,37 @@ export default {
   },
   mounted () {
     postHttp({url: 'https://192.168.1.107/apps/v1/video/details', data: {vid: 7010}}).then(response => {
-      console.log(response.headers)
       this.videoDetail = response.data.data
+      this.videoDetail.url = 'https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm'
+      this.videoDetail.origin = this.videoDetail.pic.origin
     })
+    this.$store.dispatch('homeHeadActH')
+  },
+  methods: {
+    shortIntro: function () {
+    }
   }
 }
 </script>
 
-<style scoped>
-
+<style lang='scss' scoped>
+  @import '../../style/publicDeclar';
+  .videoPlay{
+    font-size: 0.26rem;
+    text-align: left;
+    .videodetail{
+      padding: 0.25rem 0.3rem;
+      width: 100%;
+      box-sizing: border-box;
+      h2{
+        display: inline-block;
+        width: 80%;
+      }
+      .shortIntro{
+        width: 19%;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+  }
 </style>

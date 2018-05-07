@@ -1,4 +1,5 @@
 <template>
+  <!--https://blog.csdn.net/sjn0503/article/details/76074569-->
   <div id="app">
     <!--公用头部，当normalHead为true时显示-->
     <home-head v-if ='getHead'>
