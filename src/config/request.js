@@ -12,6 +12,7 @@ const service = axios.create({
 
 service.interceptors.response.use(
   function (response) {
+    store.dispatch('changeProgFinish')
     return Promise.resolve(response)
   },
   function (error) {
@@ -21,7 +22,8 @@ service.interceptors.response.use(
       status: error.response.status,
       statusText: error.response.statusText
     }
-    store.commit('ON_HTTP_ERROR', httpError)
+    // store.commit('ON_HTTP_ERROR', httpError)
+    store.dispatch('changeProgFail', httpError)
     return Promise.reject(error)
   }
 )

@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     changeHomeHead: function () {
-      this.$store.dispatch('changeProgFinish')
       this.$store.dispatch('homeHeadAct')
     }
   }
