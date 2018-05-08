@@ -4,9 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import store from './store'
 import router from './router'
-// import VueAxios from './config/request'
 import './config/rem.js'
 import './style/publicSty.css'
+import VueProgressBar from 'vue-progressbar'
+
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '2px'
+})
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */
