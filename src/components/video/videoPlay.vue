@@ -1,6 +1,6 @@
 <template>
-  <div class="videoPlay">
-    <video-tag :video-src='videoDetail.url' :video-image='videoDetail.origin'></video-tag>
+  <div class="videoPlay" >
+    <video-tag :video-src= 'url' :video-image= 'image'></video-tag>
     <div class="videodetail">
       <h2>{{videoDetail.title}}</h2>
       <div class="shortIntro shortIntroHide" @click="shortIntro">简介 ></div>
@@ -15,8 +15,13 @@ export default {
   name: 'videoPlay',
   data () {
     return {
-      videoDetail: {}
+      videoDetail: {},
+      url: 'http://v.myzx.cn/default/20171221/5a3b16a4f397f.mp4',
+      image: 'http://img1.myzx.cn/video/admin/20171221/5a3b17e3d86fc.jpg'
     }
+  },
+  created () {
+    this.$store.dispatch('changeActiveNum', 2)
   },
   components: {
     videoTag
@@ -24,10 +29,9 @@ export default {
   mounted () {
     postHttp({url: 'https://192.168.1.107/apps/v1/video/details', data: {vid: 7010}}).then(response => {
       this.videoDetail = response.data.data
-      this.videoDetail.url = 'https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm'
-      this.videoDetail.origin = this.videoDetail.pic.origin
+      this.url = response.data.data.url
+      this.image = this.videoDetail.pic.origin
     })
-    this.$store.dispatch('homeHeadActH')
   },
   methods: {
     shortIntro: function () {

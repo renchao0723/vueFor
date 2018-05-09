@@ -14,19 +14,20 @@
 <script>
 export default {
   name: 'homeFoot',
+  props: ['nums'],
   data () {
     return {
       isActive: true,
       footArr: [{
         name: '首頁',
         class: 'icon_index',
-        active: true,
+        active: false,
         url: 'homeBody'
       }, {
         name: '微视',
         class: 'icon_weishi',
         active: false,
-        url: '/ws'
+        url: 'homeBody'
       }, {
         name: '小视频',
         class: 'icon_video',
@@ -36,8 +37,13 @@ export default {
         name: '我的',
         class: 'icon_my',
         active: false,
-        url: '/me'
+        url: 'homeBody'
       }]
+    }
+  },
+  watch: {
+    nums: function (newValue, oldVaue) {
+      this.selectpage(newValue)
     }
   },
   methods: {

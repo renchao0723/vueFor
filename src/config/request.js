@@ -17,12 +17,12 @@ service.interceptors.response.use(
   },
   function (error) {
     // 请求错误则向store commit这个状态变化
+    console.log(error)
     const httpError = {
       hasError: true,
       status: error.response.status,
       statusText: error.response.statusText
     }
-    // store.commit('ON_HTTP_ERROR', httpError)
     store.dispatch('changeProgFail', httpError)
     return Promise.reject(error)
   }

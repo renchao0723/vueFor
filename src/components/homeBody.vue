@@ -28,6 +28,9 @@ export default {
     getHttp('https://192.168.1.107/apps/v1/Keshi/hotList').then(response => {
       this.ksList = response.data.data
     })
+  },
+  created () {
+    this.$store.dispatch('changeActiveNum', 0)
     this.changeHomeHead()
   },
   components: {
@@ -35,7 +38,6 @@ export default {
   },
   methods: {
     changeHomeHead: function () {
-      this.$store.dispatch('homeHeadAct')
     }
   }
 }

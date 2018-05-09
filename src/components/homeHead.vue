@@ -2,9 +2,9 @@
   <transition name='fade'>
     <div>
       <div class='head'>
-        <slot name='headLeft'></slot>
-        <slot name='centerTitle' class="centerTitle"></slot>
-        <slot name='headRight' class="headRight"></slot>
+        <router-link to='/play' slot='headLeft' class="head_Left"><i></i></router-link>
+        <div slot='centerTitle' class="center_Title">名医在线</div>
+        <router-link to="#" slot='headRight' class="head_Right"><i></i></router-link>
       </div>
       <div style="height: 0.9rem;"></div>
     </div>

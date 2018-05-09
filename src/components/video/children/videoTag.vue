@@ -51,6 +51,12 @@ export default {
       }
     }
   },
+  watch: {
+    videoSrc: function (newVal, oldVal) {
+      this.playerOptions.sources[0].src = this.videoSrc
+      this.playerOptions.poster = this.videoImage
+    }
+  },
   components: {
     videoPlayer
   },

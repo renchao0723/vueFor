@@ -3,10 +3,14 @@ const state = {
   progValue: true,
   progDirect: 'front', // front/behind
   progFinish: true,
-  progFail: true
+  progFail: true,
+  activeNum: 1
 }
 // getters
 const getters = {
+  getActiveNum: state => {
+    return state.activeNum
+  },
   // 調用方法 store.getters.getHead
   getProgStart: state => {
     return state.progStart
@@ -24,8 +28,12 @@ const getters = {
     return state.progFail
   }
 }
-// actions 可以包含任意异步操作
+
 const actions = {
+  changeActiveNum (context, num) {
+    console.log(num)
+    context.commit('changeActiveNum', num)
+  },
   changeProgStart (context) {
     context.commit('changeProgStart')
   },
@@ -44,6 +52,9 @@ const actions = {
 }
 // mutations 更改 store 的状态
 const mutations = {
+  changeActiveNum: (state, num) => {
+    state.activeNum = num
+  },
   changeProgStart: state => {
     state.progStart = !state.progStart
   },

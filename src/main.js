@@ -20,7 +20,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  // VueAxios,
   components: { App },
   template: '<App/>'
 })

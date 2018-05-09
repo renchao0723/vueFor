@@ -27,9 +27,6 @@ export default {
     swiperSlide
   },
   methods: {
-    changeHomeHead: function () {
-      this.store.dispatch('homeHeadAct')
-    }
   },
   mounted () {
     getHttp('https://192.168.1.107/apps/v1/public/bannerList').then(response => {
