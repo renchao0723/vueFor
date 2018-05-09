@@ -29,7 +29,7 @@ export default {
   methods: {
   },
   mounted () {
-    getHttp('https://192.168.1.107/apps/v1/public/bannerList').then(response => {
+    getHttp('/apps/v1/public/bannerList').then(response => {
       this.slides = response.data.data
     })
   }

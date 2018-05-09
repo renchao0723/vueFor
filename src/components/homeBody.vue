@@ -25,7 +25,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('changeProgStart')
-    getHttp('https://192.168.1.107/apps/v1/Keshi/hotList').then(response => {
+    getHttp('/apps/v1/Keshi/hotList').then(response => {
       this.ksList = response.data.data
     })
   },

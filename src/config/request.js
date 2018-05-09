@@ -5,7 +5,7 @@ import store from '../store/index'
 Vue.use(VueAxios, axios)
 // 创建axios实例
 const service = axios.create({
-  baseURL: ' https://easy-mock.com/mock/5a45f7b3105bf467fbd51960/example',
+  baseURL: ' https://192.168.1.107',
   headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
   timeout: 10000 // 请求超时时间
 })

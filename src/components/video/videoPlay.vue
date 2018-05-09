@@ -27,7 +27,7 @@ export default {
     videoTag
   },
   mounted () {
-    postHttp({url: 'https://192.168.1.107/apps/v1/video/details', data: {vid: 7010}}).then(response => {
+    postHttp({url: '/apps/v1/video/details', data: {vid: 7010}}).then(response => {
       this.videoDetail = response.data.data
       this.url = response.data.data.url
       this.image = this.videoDetail.pic.origin
