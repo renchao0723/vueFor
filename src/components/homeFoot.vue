@@ -27,7 +27,7 @@ export default {
         name: '微视',
         class: 'icon_weishi',
         active: false,
-        url: 'homeBody'
+        url: 'ogcIndex'
       }, {
         name: '小视频',
         class: 'icon_video',
@@ -37,7 +37,7 @@ export default {
         name: '我的',
         class: 'icon_my',
         active: false,
-        url: 'homeBody'
+        url: 'me'
       }]
     }
   },
@@ -59,6 +59,7 @@ export default {
 <style scoped>
 .foot{
   position: fixed;
+  z-index: 999;
   bottom: 0;
   left: 0;
   width: 100%;

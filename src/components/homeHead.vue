@@ -24,6 +24,7 @@ export default {
 <style scoped>
   .head{
     position: fixed;
+    z-index: 999;
     top: 0;
     height: 0.9rem;
     width: 100%;

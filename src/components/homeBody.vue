@@ -25,9 +25,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('changeProgStart')
-    getHttp('/apps/v1/Keshi/hotList').then(response => {
-      this.ksList = response.data.data
-    })
+    // this.httpHotList()
   },
   created () {
     this.$store.dispatch('changeActiveNum', 0)
@@ -36,8 +34,16 @@ export default {
   components: {
     homeBodySwiper
   },
+  activated () {
+    if (!this.ksList.length) this.httpHotList()
+  },
   methods: {
     changeHomeHead: function () {
+    },
+    httpHotList: function () {
+      getHttp('/apps/v1/Keshi/hotList').then(response => {
+        this.ksList = response.data.data
+      })
     }
   }
 }

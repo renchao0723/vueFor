@@ -4,10 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import store from './store'
 import router from './router'
+import uploader from 'vue-simple-uploader'
 import './config/rem.js'
 import './style/publicSty.css'
 import VueProgressBar from 'vue-progressbar'
 
+Vue.use(uploader)
 Vue.use(VueProgressBar, {
   color: 'rgb(143, 255, 199)',
   failedColor: 'red',

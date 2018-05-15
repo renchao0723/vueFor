@@ -26,12 +26,18 @@ export default {
     swiper,
     swiperSlide
   },
+  activated () {
+    if (!this.slides.length) this.httpBannerList()
+  },
   methods: {
+    httpBannerList: function () {
+      getHttp('/apps/v1/public/bannerList').then(response => {
+        this.slides = response.data.data
+      })
+    }
   },
   mounted () {
-    getHttp('/apps/v1/public/bannerList').then(response => {
-      this.slides = response.data.data
-    })
+    // this.httpBannerList()
   }
 }
 </script>
