@@ -5,8 +5,9 @@ import store from '../store/index'
 Vue.use(VueAxios, axios)
 // 创建axios实例
 const service = axios.create({
-  baseURL: ' https://192.168.1.107',
-  headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+  baseURL: 'https://m.myzx.cn',
+  // baseURL: 'http://192.168.1.50',
+  headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
   timeout: 10000 // 请求超时时间
 })
 
@@ -17,7 +18,6 @@ service.interceptors.response.use(
   },
   function (error) {
     // 请求错误则向store commit这个状态变化
-    console.log(error)
     store.dispatch('changeProgFail')
     return Promise.reject(error)
   }

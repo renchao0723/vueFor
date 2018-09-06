@@ -1,13 +1,16 @@
 <template>
-  <div class="foot">
-    <ul class="footer">
-      <li v-for="(item, index) in footArr" v-bind:key="index" v-bind:class="{ active: item.active }" @click="selectpage(index)">
-        <router-link :to="{name:item.url,params:{ } }" >
-          <i v-bind:class ="item.class"></i>
-          <p>{{item.name}}</p>
-        </router-link>
-      </li>
-    </ul>
+  <div>
+    <div style="height: 1rem;"></div>
+    <div class="foot">
+      <ul class="footer">
+        <li v-for="(item, index) in footArr" v-bind:key="index" v-bind:class="{ active: item.active }" @click="selectpage(index)">
+          <router-link :to="{name:item.url,params:{ } }" >
+            <i v-bind:class ="item.class"></i>
+            <p>{{item.name}}</p>
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -65,7 +68,7 @@ export default {
   width: 100%;
   height: 1rem;
   overflow: hidden;
-  background: rgba(244,244,244,0.8)
+  background: rgba(255,255,255,0.8)
 }
 .footer{
   display: flex;

@@ -8,6 +8,7 @@ import uploader from 'vue-simple-uploader'
 import './config/rem.js'
 import './style/publicSty.css'
 import VueProgressBar from 'vue-progressbar'
+import Mint from 'mint-ui'
 
 Vue.use(uploader)
 Vue.use(VueProgressBar, {
@@ -15,6 +16,7 @@ Vue.use(VueProgressBar, {
   failedColor: 'red',
   height: '2px'
 })
+Vue.use(Mint)
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */

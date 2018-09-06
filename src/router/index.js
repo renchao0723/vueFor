@@ -6,6 +6,7 @@ import homeFoot from '@/components/homefoot'
 import videoPlay from '@/components/video/videoPlay'
 import ogcIndex from '@/components/ogc/index'
 import me from '@/components/my/index'
+import modlue from '@/page/modlue'
 
 Vue.use(Router)
 
@@ -44,6 +45,13 @@ export default new Router({
         default: ogcIndex,
         homeHead: homeHead,
         homeFoot: homeFoot
+      }
+    },
+    {
+      path: '/modlue',
+      name: 'modlue',
+      components: {
+        default: modlue
       }
     }
   ]
